@@ -71,6 +71,8 @@ public class Snapdeal {
 		Thread.sleep(2000);
 
 		// 9. Filter with color Navy
+		driver.findElement(By.xpath("//div[@data-name='Color_s']/following-sibling::button[contains(text(),'View More')]"))
+				.click();
 		WebElement navyColor = driver.findElement(By.xpath("//label[@for='Color_s-Navy']/preceding-sibling::input"));
 		boolean navyFlag = navyColor.isEnabled();
 		if (navyFlag) {
